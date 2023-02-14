@@ -17,7 +17,6 @@ Please install the items below:
 
 ## How to run
 ```
-$ export IBMCLOUD_API_KEY=<YOUR IBMCLOUD_API_KEY>
 $ docker-compose run ubuntu-env
 ```
 ## Available Tools
