@@ -105,4 +105,60 @@ Detect secrets...........................................................Passed
 Updating https://github.com/pre-commit/pre-commit-hooks ... already up to date.
 Updating https://github.com/ibm/detect-secrets ... already up to date.
 04:43:03 ubuntu@576957a24aa2 ubuntu-env ±|init|→
+04:47:39 ubuntu@7db3817c6387 ubuntu-env ±|init ✗|→ git add *
+04:47:48 ubuntu@7db3817c6387 ubuntu-env ±|init ✗|→ git commit -m "init"
+[INFO] Initializing environment for https://github.com/pre-commit/pre-commit-hooks.
+[INFO] Initializing environment for https://github.com/ibm/detect-secrets.
+[INFO] Installing environment for https://github.com/pre-commit/pre-commit-hooks.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+[INFO] Installing environment for https://github.com/ibm/detect-secrets.
+[INFO] Once installed this environment will be reused.
+[INFO] This may take a few minutes...
+trim trailing whitespace.................................................Passed
+fix end of files.........................................................Passed
+check yaml...............................................................Passed
+check for added large files..............................................Passed
+Detect secrets...........................................................Failed
+- hook id: detect-secrets
+- exit code: 3
+- files were modified by this hook
+
+The baseline file was updated.
+Probably to keep line numbers of secrets up-to-date.
+Please `git add .secrets.baseline`, thank you.
+
+04:48:10 ubuntu@7db3817c6387 ubuntu-env ±|init ✗|→ git add .secrets.baseline
+04:48:29 ubuntu@7db3817c6387 ubuntu-env ±|init ✗|→ git commit -m "init"
+trim trailing whitespace.................................................Passed
+fix end of files.........................................................Passed
+check yaml...............................................................Passed
+check for added large files..............................................Passed
+Detect secrets...........................................................Passed
+[init 24051ae] init
+ 3 files changed, 1 insertion(+), 14 deletions(-)
+04:48:33 ubuntu@7db3817c6387 ubuntu-env ±|init|→
+04:48:37 ubuntu@7db3817c6387 ubuntu-env ±|init|→ git push
+fatal: The current branch init has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin init
+
+04:48:41 ubuntu@7db3817c6387 ubuntu-env ±|init|→ git push --set-upstream origin init
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (18/18), done.
+Writing objects: 100% (18/18), 3.62 KiB | 231.00 KiB/s, done.
+Total 18 (delta 11), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (11/11), completed with 5 local objects.
+remote:
+remote: Create a pull request for 'init' on GitHub by visiting:
+remote:      https://github.com/syyang-in-cloud/ubuntu-dev/pull/new/init
+remote:
+To github.com:syyang-in-cloud/ubuntu-dev.git
+ * [new branch]      init -> init
+Branch 'init' set up to track remote branch 'init' from 'origin'.
+04:48:50 ubuntu@7db3817c6387 ubuntu-env ±|init|→
 ```
