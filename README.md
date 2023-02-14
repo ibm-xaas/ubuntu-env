@@ -24,7 +24,7 @@ $ docker-compose run ubuntu-env
 * docker-ce and docker-compose
 * docker-in-docker
 * pyenv, pipenv, Ansible latest
-* python 3.10.5 or later
+* python 3.10.latest or later
 * pre-commit latest
 * syft, grype latest
 * ohmybash latest

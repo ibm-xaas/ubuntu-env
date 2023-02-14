@@ -55,8 +55,8 @@ RUN echo 'eval "$(pyenv virtualenv-init -)"' >> ${HOME}/.bashrc
 #
 RUN set -ex && \
 	curl https://pyenv.run | bash && \
-	pyenv install 3.10.5 && \
-	pyenv global 3.10.5 && \
+	pyenv install 3.10 && \
+	pyenv global 3.10 && \
 	pip install --upgrade pip && \
 	# Ansible
 	pip install ansible && \
