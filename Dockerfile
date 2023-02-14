@@ -22,7 +22,7 @@ RUN set -ex && \
 	"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 	$(lsb_release -cs) stable" | tee /etc/apt/sources.list.d/docker.list > /dev/null && \
 	apt-get update && \
-	apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+	apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin docker-compose
 # pyenv requires
 RUN set -ex && \
 	apt-get update && \
@@ -55,8 +55,8 @@ RUN echo 'eval "$(pyenv virtualenv-init -)"' >> ${HOME}/.bashrc
 #
 RUN set -ex && \
 	curl https://pyenv.run | bash && \
-	pyenv install 3.10.5 && \
-	pyenv global 3.10.5 && \
+	pyenv install 3.10 && \
+	pyenv global 3.10 && \
 	pip install --upgrade pip && \
 	# Ansible
 	pip install ansible && \
